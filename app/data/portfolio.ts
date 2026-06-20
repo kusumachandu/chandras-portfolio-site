@@ -97,33 +97,23 @@ export const projects = [
     title: "Leads Dashboard",
     desc: "Per-service leads dashboard powered by Google Sheets. Dynamic column definitions, sortable/filterable tables, and service-specific config — zero manual data entry.",
     meta: "Real-time sync",
-    href: "httpss://portal.jaagrukbharat.com",
+    href: "https://portal.jaagrukbharat.com",
   },
   {
     emoji: "🏢",
     bg: "linear-gradient(135deg,#1c1206 0%,#2d1c06 100%)",
-    badge: "Gov-Tech · Mobile",
-    tags: ["React Native", "TypeScript", "Cashfree"],
-    title: "MSME Registration",
-    desc: "End-to-end mobile registration flow for Udyam/MSME certificates. Multi-step form UX, Cashfree payment integration, and WhatsApp delivery pipeline.",
-    meta: "Cashfree · WhatsApp",
-    href: "#",
-  },
-  {
-    emoji: "🔐",
-    bg: "linear-gradient(135deg,#150f2e 0%,#1e1145 100%)",
-    badge: "Auth · Full Stack",
-    tags: ["Next.js", "NextAuth", "Zustand", "OAuth"],
-    title: "Auth & Identity System",
-    desc: "Production-grade auth with Google OAuth, JWT, OTP flows, and SSR-safe Zustand hydration. Solved complex SSR/CSR mismatch and duplicate API call bugs.",
-    meta: "OAuth · JWT · OTP",
-    href: "#",
+    badge: "Gov-Tech · CMS Platform",
+    tags: ["React", "Next.js", "TypeScript", "CMS"],
+    title: "Content Management System",
+    desc: "Developed a custom Content Management System enabling internal teams to create, manage, and publish articles, services, schemes, FAQs, and dynamic website content without developer intervention. Integrated role-based access, content workflows, SEO management, and real-time publishing to the production website.",
+    meta: "CMS · SEO · Content Publishing",
+    href: "https://jaagrukbharat.com/content-management",
   },
 ];
 
 export const experience = [
   {
-    period: "2023 — Present",
+    period: "2024 — Present",
     type: "Full-time",
     company: "🏛️ Jaagruk Bharat",
     role: "Software Development Engineer I",
@@ -146,9 +136,9 @@ export const experience = [
     ],
   },
   {
-    period: "2022 — 2023",
+    period: "2023 — 2024",
     type: "Full-time",
-    company: "💼 Previous Company",
+    company: "💼 Freelancer",
     role: "MERN Stack Developer",
     blurb:
       "Built and maintained full-stack web applications for clients across e-commerce, logistics, and SaaS sectors.",
@@ -160,9 +150,9 @@ export const experience = [
     stack: ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "Redux"],
   },
   {
-    period: "2020 — 2022",
+    period: "2021 — 2023",
     type: "Junior",
-    company: "🚀 Early Career",
+    company: "🚀 Masai/Zvoid",
     role: "Frontend Developer",
     blurb:
       "Started my professional journey building React UIs, learning production-grade development practices alongside senior engineers.",
@@ -171,6 +161,6 @@ export const experience = [
       "Integrated REST APIs and managed application state with Redux",
       "Contributed to internal component library used across 5+ projects",
     ],
-    stack: ["React", "JavaScript", "HTML/CSS", "Redux"],
+    stack: ["React", "TypeScript", "HTML/CSS", "Redux", "tailwind css"],
   },
 ];
