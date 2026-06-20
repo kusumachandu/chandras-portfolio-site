@@ -16,10 +16,11 @@ export const meta = {
     { num: "20+", label: "Projects shipped" },
     { num: "10+", label: "Happy clients" },
   ],
-  email: "chandrashekar@email.com",
-  linkedin: "https://linkedin.com/in/chandrashekar",
-  github: "https://github.com/chandrashekar",
-  resume: "#",
+  email: "chandrashekar.kusuma17@email.com",
+  linkedin: "https://www.linkedin.com/in/chandrashekar-kusuma-49b65219a/",
+  github: "https://github.com/kusumachandu",
+  resume:
+    "https://drive.google.com/file/d/1tlXXAkSFfcH1QgY7b0U93UJ4jpM7IXjW/view?usp=sharing",
 };
 
 export const about = {
