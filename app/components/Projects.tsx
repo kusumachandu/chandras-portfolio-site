@@ -1,19 +1,40 @@
 "use client";
 
-import { Box, SimpleGrid, Text, HStack, Flex, Wrap, WrapItem, Link } from "@chakra-ui/react";
+import {
+  Box,
+  SimpleGrid,
+  Text,
+  HStack,
+  Flex,
+  Wrap,
+  WrapItem,
+  Link,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { projects } from "@/app/data/portfolio";
 import { useReveal } from "@/app/components/useReveal";
 
-function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: string }) {
+function ProjectCard({
+  project,
+  delay,
+}: {
+  project: (typeof projects)[0];
+  delay: string;
+}) {
   const [ref, vis] = useReveal();
   return (
     <Box
       ref={ref}
-      as={NextLink} href={project.href} target="_blank"
-      display="block" textDecoration="none"
-      bg="brand.bg1" border="1px solid" borderColor="brand.border"
-      borderRadius="20px" overflow="hidden"
+      as={NextLink}
+      href={project.href}
+      target="_blank"
+      display="block"
+      textDecoration="none"
+      bg="brand.bg1"
+      border="1px solid"
+      borderColor="brand.border"
+      borderRadius="20px"
+      overflow="hidden"
       opacity={vis ? 1 : 0}
       transform={vis ? "translateY(0)" : "translateY(28px)"}
       transition={`opacity 0.65s ease ${delay}, transform 0.65s ease ${delay}, border-color 0.3s, box-shadow 0.3s`}
@@ -27,16 +48,27 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: s
     >
       {/* Thumb */}
       <Flex
-        h="190px" align="center" justify="center"
-        fontSize="48px" position="relative"
+        h="190px"
+        align="center"
+        justify="center"
+        fontSize="48px"
+        position="relative"
         style={{ background: project.bg }}
       >
         {project.emoji}
         <Box
-          position="absolute" bottom={3} right={3}
-          bg="rgba(0,0,0,0.6)" border="1px solid" borderColor="brand.border2"
-          borderRadius="full" px={3} py="3px"
-          fontFamily="mono" fontSize="10px" color="brand.text2"
+          position="absolute"
+          bottom={3}
+          right={3}
+          bg="rgba(0,0,0,0.6)"
+          border="1px solid"
+          borderColor="brand.border2"
+          borderRadius="full"
+          px={3}
+          py="3px"
+          fontFamily="mono"
+          fontSize="10px"
+          color="brand.text2"
         >
           {project.badge}
         </Box>
@@ -48,9 +80,15 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: s
           {project.tags.map((t) => (
             <WrapItem key={t}>
               <Box
-                bg="brand.accentGlow" border="1px solid" borderColor="rgba(124,106,247,0.2)"
-                color="brand.accent2" fontSize="10px" fontWeight={500}
-                px="9px" py="3px" borderRadius="full"
+                bg="brand.accentGlow"
+                border="1px solid"
+                borderColor="rgba(124,106,247,0.2)"
+                color="brand.accent2"
+                fontSize="10px"
+                fontWeight={500}
+                px="9px"
+                py="3px"
+                borderRadius="full"
                 fontFamily="mono"
               >
                 {t}
@@ -61,8 +99,11 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: s
 
         <Text
           fontFamily="'ClashDisplay', sans-serif"
-          fontSize="21px" fontWeight={700}
-          color="brand.text" mb={2} letterSpacing="-0.5px"
+          fontSize="21px"
+          fontWeight={700}
+          color="brand.text"
+          mb={2}
+          letterSpacing="-0.5px"
         >
           {project.title}
         </Text>
@@ -72,12 +113,19 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: s
         </Text>
 
         <Flex
-          justify="space-between" align="center"
-          pt={4} borderTop="1px solid" borderColor="brand.border"
+          justify="space-between"
+          align="center"
+          pt={4}
+          borderTop="1px solid"
+          borderColor="brand.border"
         >
           <Text
-            fontSize="13px" fontWeight={500} color="brand.accent"
-            display="flex" alignItems="center" gap={1}
+            fontSize="13px"
+            fontWeight={500}
+            color="brand.accent"
+            display="flex"
+            alignItems="center"
+            gap={1}
             transition="gap 0.2s"
             _groupHover={{ gap: "9px" }}
           >
@@ -96,16 +144,32 @@ export default function Projects() {
   const [ref, vis] = useReveal();
 
   return (
-    <Box as="section" id="projects" py="100px" px={{ base: "20px", md: "48px" }}>
+    <Box
+      as="section"
+      id="projects"
+      py="100px"
+      px={{ base: "20px", md: "48px" }}
+    >
       <Box maxW="1100px" mx="auto">
-        <HStack spacing={2} mb={4}
+        <HStack
+          spacing={2}
+          mb={4}
           ref={ref}
           opacity={vis ? 1 : 0}
           transform={vis ? "translateY(0)" : "translateY(28px)"}
           transition="opacity 0.65s ease, transform 0.65s ease"
         >
-          <Text fontFamily="mono" fontSize="11px" color="brand.text3">//</Text>
-          <Text fontFamily="mono" fontSize="11px" fontWeight={500} color="brand.accent" letterSpacing="2px" textTransform="uppercase">
+          <Text fontFamily="mono" fontSize="11px" color="brand.text3">
+            //
+          </Text>
+          <Text
+            fontFamily="mono"
+            fontSize="11px"
+            fontWeight={500}
+            color="brand.accent"
+            letterSpacing="2px"
+            textTransform="uppercase"
+          >
             Selected work
           </Text>
         </HStack>
@@ -113,8 +177,11 @@ export default function Projects() {
         <Text
           fontFamily="'ClashDisplay', sans-serif"
           fontSize={{ base: "30px", md: "42px" }}
-          fontWeight={700} color="brand.text"
-          letterSpacing="-1.5px" lineHeight={1.1} mb={4}
+          fontWeight={700}
+          color="brand.text"
+          letterSpacing="-1.5px"
+          lineHeight={1.1}
+          mb={4}
           opacity={vis ? 1 : 0}
           transform={vis ? "translateY(0)" : "translateY(28px)"}
           transition="opacity 0.65s ease 0.05s, transform 0.65s ease 0.05s"
@@ -122,12 +189,18 @@ export default function Projects() {
           Projects I&apos;m proud of
         </Text>
 
-        <Text fontSize="17px" color="brand.text2" maxW="520px" lineHeight={1.75} mb={14}
+        <Text
+          fontSize="17px"
+          color="brand.text2"
+          maxW="520px"
+          lineHeight={1.75}
+          mb={14}
           opacity={vis ? 1 : 0}
           transform={vis ? "translateY(0)" : "translateY(28px)"}
           transition="opacity 0.65s ease 0.1s, transform 0.65s ease 0.1s"
         >
-          A few highlights from 20+ shipped projects across government tech, SaaS, and product platforms.
+          A few highlights from 10+ shipped projects across government tech,
+          SaaS, and product platforms.
         </Text>
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
